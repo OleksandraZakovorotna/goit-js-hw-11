@@ -1,0 +1,22 @@
+import axios from "axios";
+
+
+export function getImagesByQuery(query) {
+
+    return axios.get("https://pixabay.com/api/", {
+        params: {
+        key: "54612397-f95ccc6630e34cb503ef4faef",
+        q: query,
+        image_type: "photo",
+        orientation: "horizontal",
+        safesearch: true
+    }})
+        .then(res => {
+            return res.data.hits;
+            // console.log(res.data);
+            
+        })
+        .catch(error =>
+            console.log(res.statusText)
+        )
+}
