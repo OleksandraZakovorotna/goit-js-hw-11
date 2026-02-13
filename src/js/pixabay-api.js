@@ -1,7 +1,8 @@
 import axios from "axios";
 
 
-export function getImagesByQuery(query) {
+export async function getImagesByQuery(query) {
+
 
     return axios.get("https://pixabay.com/api/", {
         params: {

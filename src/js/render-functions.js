@@ -47,9 +47,9 @@ export function clearGallery(){
 };
 
 export function showLoader(){
-    loader.classList.add("active");
+    loader.classList.remove("hidden");
 };
 
 export function hideLoader() {
-    loader.classList.remove("active");
+    loader.classList.add("hidden");
 };

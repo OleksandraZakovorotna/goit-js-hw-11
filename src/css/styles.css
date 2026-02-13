@@ -103,11 +103,12 @@ input:hover {
     color: #2e2f42;
 }
 
-.loader {
+.loader.hidden {
   display: none;
 }
 
-.loader.active {
+.loader {
+  z-index: 1000;
   color: #6c8cff;
   font-size: 45px;
   text-indent: -9999em;
@@ -115,10 +116,10 @@ input:hover {
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%, 50%);
+  transform: translate(-50%, -50%);
   animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
 }
 
