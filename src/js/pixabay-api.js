@@ -14,10 +14,8 @@ export async function getImagesByQuery(query) {
     }})
         .then(res => {
             return res.data.hits;
-            // console.log(res.data);
-            
         })
         .catch(error =>
-            console.log(res.statusText)
+            console.log(error.statusText)
         )
 }

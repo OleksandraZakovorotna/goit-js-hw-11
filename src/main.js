@@ -34,7 +34,11 @@ function handleSubmit(event) {
             createGallery(res);
         })
         .catch(error =>
-            error.message)
+            iziToast.error({
+                message: `Sorry, there are no images matching your search query. Please try again!`,
+                position: "topRight",
+                color: "red"
+            }))
         .finally(
             hideLoader
         )
